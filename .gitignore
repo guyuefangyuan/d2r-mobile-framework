@@ -1,0 +1,65 @@
+# 构建产物（Xcode 的派生数据目录，由 dm/ios 下的脚本生成）
+.iosdd/
+.iosdd_mac/
+.iosdd_*/
+.DS_Store
+
+# ---- 构建产物 / build output -------------------------------------------------
+build/
+out/
+obj/
+bin/
+.cache/
+__pycache__/
+*.pyc
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.pdb
+*.class
+*.jar
+*.apk
+*.aab
+*.ipa
+*.xcarchive
+
+# 打包器与测试的中间结果
+*.log
+!docs/**/*.log
+
+# ---- 游戏文件与用户产物：绝对不要提交 / never commit these -------------------
+# 仓库只发布框架源码；下面这些要么是游戏本体数据，要么是解包/补丁后的派生物，
+# 要么是运行期生成的状态，都必须在本地保留。见 NOTICE.md。
+# Framework source only. The entries below are either game data, derived from it, or
+# runtime state; they must stay local. See NOTICE.md.
+*.romfs
+*.nsp
+*.xci
+*.nca
+*.nro
+*.nso
+*.kip
+*.kipx
+prod.keys
+title.keys
+*.keys
+main.patched.bin
+sdk.patched.bin
+subsdk*.patched.bin
+*.patched.bin
+romfs-overlay/
+romfs-overlay-variants/
+romfs-view/
+shader_cache/
+pipeline-cache/
+metal_shader_cache/
+save/
+save.work/
+profiles/
+diagnostics/
+sw_custom.txt
+d2rpack/
+*.d2rpack
+D2R-Offline-*/
